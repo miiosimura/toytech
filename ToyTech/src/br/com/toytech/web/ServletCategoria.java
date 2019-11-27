@@ -24,23 +24,12 @@ public class ServletCategoria extends HttpServlet {
 		String cmd = request.getParameter("cmd");
 		CategoriaDAO dao;
 		Categoria categoria = new Categoria();
-		
-		if (cmd != null) {
-			try {
-				categoria.setIdCategoria(Integer.parseInt(request.getParameter("idCategoria")));
-				categoria.setNomeCategoria(request.getParameter("nomeCategoria"));
 				
-			} catch (Exception ex) {
-				ex.printStackTrace();
-			}
-		}
-		
 		try {
 			dao = new CategoriaDAO();
-			
 			RequestDispatcher rd = null;
 			 
-			if (cmd.equalsIgnoreCase("listar")) {
+			if (cmd.equalsIgnoreCase("mostrar")) {
 				List<Categoria> categoriaList = dao.todasCategorias();
 				request.setAttribute("categoriaList", categoriaList);
 				rd = request.getRequestDispatcher("/listCategoria.jsp");
@@ -88,14 +77,12 @@ public class ServletCategoria extends HttpServlet {
 	
 
     @Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		processRequest(request, response);
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		processRequest(request, response);
 	}
 

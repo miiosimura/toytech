@@ -25,7 +25,7 @@
 
 	<h3>${message}</h3>
 
-	<form action="ServletUsuario?cmd=logar" method="post" name="formLogin">
+	<form action="ServletLogin?cmd=logar" method="post" name="formLogin">
 		Usuário:<input type="text" name="username" required><br>
 		Senha:<input type="password" name="senha" required><br> 
 		<input type="submit" value="Entrar" onclick="validarLogin()"> 

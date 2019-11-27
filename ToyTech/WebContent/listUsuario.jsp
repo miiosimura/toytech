@@ -58,7 +58,7 @@
 
 	          	<c:if test= "${not empty username}">
             		<p class="navbar-text pull-right" style="margin: 0px;">					
-						Olá ${username}!  |  <a href="ServletUsuario?cmd=logout">Sair</a>
+						Olá ${username}!  |  <a href="ServletLogin?cmd=logout">Sair</a>
 	            	</p>
         		</c:if>
 
@@ -90,9 +90,9 @@
 	              
 	              <c:if test= "${not empty username}">
             		<li class="nav-header">Área Administrativa</li>
-	              	<li><a href="ServletCategoria?cmd=listar">Listar Categorias</a></li>
+	              	<li><a href="ServletCategoria?cmd=mostrar">Listar Categorias</a></li>
 	              	<li><a href="ServletProduto?cmd=mostrar">Listar Produtos</a></li>
-	              	<li><a href="ServletUsuario?cmd=listar">Listar Usuários</a></li>
+	              	<li><a href="ServletUsuario?cmd=mostrar">Listar Usuários</a></li>
         		  </c:if>
         		  	              
 	            </ul>
@@ -107,21 +107,20 @@
 	          		<center>
 						<table width="100%" border="1" cellpadding="2" cellspacing="0">
 							<tr style="border-botton: none;">
-								<th colspan="5"><h3>Lista de Usuarios</h3></th>
+								<th colspan="4"><h3>Lista de Categorias</h3></th>
 							</tr>
 							
 							<tr>
-								<th colspan="5" style="text-align: right;">
-									<a href="cadUsuario.jsp"><img src="icon/novo.png" style="width: 20px;">Adicionar Novo</a>
+								<th colspan="4" style="text-align: right;">
+									<a href="cadCategoria.jsp"><img src="icon/novo.png" style="width: 20px;">Adicionar Nova</a>
 								</th>
 							</tr>
 								
 							<tr>
 								<th>ID</th>
-								<th>Nome do Usuario</th>
+								<th>Nome do Usuário</th>
 								<th>Username</th>
-								<th>Alterar</th>
-								<th>Excluir</th>
+								<th>Senha</th>
 							</tr>
 							<%
 								List<Usuario> lista = new ArrayList<Usuario>();
@@ -132,6 +131,7 @@
 								<td><%=u.getIdUsuario()%></td>
 								<td><%=u.getNome()%></td>
 								<td><%=u.getUsername()%></td>
+								<td><%=u.getSenha()%></td>
 								<td style="text-align: center;"><a href="ServletUsuario?cmd=atu&id=<%=u.getIdUsuario()%>"><img src="icon/editar.png" style="width: 20px; position: center;"></a></td>
 								<td style="text-align: center;"><a href="ServletUsuario?cmd=exc&id=<%=u.getIdUsuario()%>"><img src="icon/excluir.png" style="width: 20px;"></a></td>
 							</tr>

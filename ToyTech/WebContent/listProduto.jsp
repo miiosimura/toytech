@@ -58,7 +58,7 @@
 
 	          	<c:if test= "${not empty username}">
             		<p class="navbar-text pull-right" style="margin: 0px;">					
-						Olá ${username}!  |  <a href="ServletUsuario?cmd=logout">Sair</a>
+						Olá ${username}!  |  <a href="ServletLogin?cmd=logout">Sair</a>
 	            	</p>
         		</c:if>
 
@@ -90,9 +90,9 @@
 	              
 	              <c:if test= "${not empty username}">
             		<li class="nav-header">Área Administrativa</li>
-	              	<li><a href="ServletCategoria?cmd=listar">Listar Categorias</a></li>
+	              	<li><a href="ServletCategoria?cmd=mostrar">Listar Categorias</a></li>
 	              	<li><a href="ServletProduto?cmd=mostrar">Listar Produtos</a></li>
-	              	<li><a href="ServletUsuario?cmd=listar">Listar Usuários</a></li>
+	              	<li><a href="ServletUsuario?cmd=mostrar">Listar Usuários</a></li>
         		  </c:if>
         		  	              
 	            </ul>

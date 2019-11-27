@@ -23,34 +23,12 @@ public class ServletProduto extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		
-		// a vari�vel cmd indica o tipo de a��o - incluir, alterar, consulta.....
 		String cmd = request.getParameter("cmd");
-		
-		// cria um objeto dao - CRUD
 		ProdutoDAO dao;
-		
-		// cria um objeto do tipo produto
 		Produto produto = new Produto();
-		
-		if (cmd != null) {
-			try {
-				// inicializa os atributos da classe Produto
-				produto.setIdProduto(Integer.parseInt(request.getParameter("txtIdProduto")));
-				produto.setIdCategoria(Integer.parseInt(request.getParameter("txtIdCategoria")));
-				produto.setNomeProduto(request.getParameter("txtNomeProduto"));
-				produto.setPrecoUnitario(Double.parseDouble(request.getParameter("txtPrecoUnitario")));
-				produto.setImgProduto(request.getParameter("txtImgProduto"));
-				produto.setDescricao(request.getParameter("txtDescricao"));
 				
-			} catch (Exception ex) {
-				ex.printStackTrace();
-			}
-		}
-		
 		try {
-			// cria a instancia do objeto dao
 			dao = new ProdutoDAO();
-			
 			RequestDispatcher rd = null;
 			 
 			if (cmd.equalsIgnoreCase("listar")) {

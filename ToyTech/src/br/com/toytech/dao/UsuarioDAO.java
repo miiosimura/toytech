@@ -154,7 +154,7 @@ public class UsuarioDAO {
 	}
 	
 	// listar todos os produtos
-	public List todosUsuarios() throws Exception {
+	public List<Usuario> todosUsuarios() throws Exception {
 		try {
 			conn = this.conn;
 			ps = conn.prepareStatement("SELECT * FROM usuario");
