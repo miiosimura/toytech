@@ -105,14 +105,14 @@
 				<c:if test= "${not empty username}">
 	          		
 	          		<center>
-						<table width="100%" border="1" cellpadding="2" cellspacing="0" class="table table-striped">
+						<table width="100%" border="1" cellpadding="2" cellspacing="0">
 							<tr style="border-botton: none;">
-								<th colspan="4"><h3>Lista de Categorias</h3></th>
+								<th colspan="4"><h3>Lista de Usuários</h3></th>
 							</tr>
 							
 							<tr>
 								<th colspan="4" style="text-align: right;">
-									<a href="cadCategoria.jsp"><img src="icon/novo.png" style="width: 20px;">Adicionar Nova</a>
+									<a href="cadUsuario.jsp"><img src="icon/novo.png" style="width: 20px;">Adicionar Novo</a>
 								</th>
 							</tr>
 								

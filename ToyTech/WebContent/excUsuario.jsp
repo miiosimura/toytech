@@ -102,36 +102,9 @@
 	        <div class="span9">
 	         <div class="container-fluid">	
 	          
-	          <jsp:useBean id="usuario" scope="session" class="br.com.toytech.bean.Usuario" />
 	          
 	          	<!-- CONTEUDO AQUI -->
-				<form action="ServletUsuario?cmd=excluir" method="post">
-					 <tbody>
-						 <tr>
-						 	<th colspan="2"><h4>Excluir Usuário</h4><br /></th>
-						 </tr>
-						 <tr>
-						 
-						 	<input type="hidden" name="idUsuario" value="<%=usuario.getIdUsuario()%>"/>
-						 
-							<th><h4>Nome do Usuario</h4></th>
-							<td><input type="text" name="nome" size="10" maxlenght="10" value="<%=usuario.getNome()%>" readonly="readonly"/></td>
-							
-							<th><h4>Username</h4></th>
-							<td><input type="text" name="username" size="10" maxlenght="10" value="<%=usuario.getUsername()%>" readonly="readonly"/></td>
-							
-							<th><h4>Senha</h4></th>
-							<td><input type="text" name="senha" size="10" maxlenght="10" value="<%=usuario.getSenha()%>" readonly="readonly"/></td>
-							
-						 </tr>
-						 
-						 <tr>
-							<td colspan="2" align="center"><br />
-							<input type="submit" value="Excluir"></td>
-						 </tr>
-					</tbody>
-				</form>
-
+	          		          
 	        </div><!--/span-->
 	      </div>
 	

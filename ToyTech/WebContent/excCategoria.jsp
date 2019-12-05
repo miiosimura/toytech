@@ -102,8 +102,7 @@
 	        <div class="span9">
 	         <div class="container-fluid">	
 	          
-	          
-	          	 <jsp:useBean id="categoria" scope="session" class="br.com.toytech.bean.Categoria" />
+	          <jsp:useBean id="categoria" scope="session" class="br.com.toytech.bean.Categoria" />
 	          
 	          	<!-- CONTEUDO AQUI -->
 	          	<form action="ServletCategoria?cmd=excluir" method="post">
@@ -126,7 +125,6 @@
 						 </tr>
 					</tbody>
 				</form>
-	          		          
 	        </div><!--/span-->
 	      </div>
 	

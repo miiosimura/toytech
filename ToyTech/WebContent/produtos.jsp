@@ -47,7 +47,11 @@
 	</head>
 
 	<body>
-		
+		<style>
+			a:link {
+    			text-decoration: none;
+			}
+		</style>
 		<div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #C9F0FF;">
 	      <div class="navbar-inner" style="height: 90px;">
 	        <div class="container-fluid">
@@ -63,7 +67,7 @@
         		</c:if>
 
 		        <c:if test= "${empty username}">
-		            <p class="navbar-text pull-right" style="padding-top: 20px; background-color: black;">					
+		            <p class="navbar-text pull-right" style="padding-top: 20px;">					
 						<a href="login.jsp">Fazer Login</a>
 	            	</p>
 		        </c:if>

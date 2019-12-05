@@ -129,7 +129,7 @@
 						 
 						 <tr>
 							<td colspan="2" align="center"><br />
-							<input type="submit" value="Cadastrar"></td>
+							<input type="submit" value="Enviar"></td>
 						 </tr>
 					</tbody>
 				</form>

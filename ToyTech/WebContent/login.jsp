@@ -22,7 +22,36 @@
 <title>Toytech</title>
 </head>
 <body>
-
+	<style>
+		form{
+		    width: 80%;
+		    margin: 0 auto;
+		    border-radius: 10px;
+		    height: auto;
+		   	padding: 90px 40px;
+		    text-align: center;
+		    font-size: 20px;
+		    border: 1px solid #ccc;
+		    background-color: #cccccc30;
+		}
+		form input {
+		    margin: 20px 10px;
+		    border-radius: 4px;
+		    text-decoration: none;
+		    box-shadow: 0 0 0 0;
+		    border: 1px solid;
+		    outline: 0;
+		    padding: 6px;
+		}
+		form a {
+		    text-decoration: none;
+		    color: #000;
+		    cursor: pointer;
+		}
+		form input[type="submit"]{
+			cursor:pointer;
+		}
+	</style>
 	<h3>${message}</h3>
 
 	<form action="ServletLogin?cmd=logar" method="post" name="formLogin">

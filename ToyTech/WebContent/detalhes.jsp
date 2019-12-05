@@ -50,6 +50,19 @@ footer {
 </head>
 
 <body>
+	<style>
+		.row-fluid{
+			display: flex;
+    		justify-content: space-around;
+		    border-radius: 10px;
+		    padding: 50px 0px;
+		    background-color: #f3f3f3;
+		}
+		.row-fluid .span9{
+			width: 40%;
+    		text-align: justify;
+		}
+	</style>
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
@@ -84,7 +97,7 @@ footer {
 						<h2><%=produto.getNomeProduto()%></h2>
 						<br/>
 						<p>
-							<img src="<%=produto.getImgProduto()%>" style="width: 300px;" class="img-rounded">
+							<img src="<%=produto.getImgProduto()%>" style="width: 300px;">
 						</p>
 					</center>
 				</div>
@@ -98,7 +111,7 @@ footer {
 					<div>
 						<br>
 						<table
-							style="border-collapse: separate; border-spacing: 0 20px; margin-top: -8px;" class="table">
+							style="border-collapse: separate; border-spacing: 0 20px; margin-top: -8px;">
 							<tr>
 								<td style="font-weight: bold;">ID:</td>
 								<td><%=produto.getIdProduto()%></td>

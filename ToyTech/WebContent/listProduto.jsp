@@ -105,7 +105,7 @@
 				<c:if test= "${not empty username}">
 	          		
 	          		<center>
-						<table width="100%" border="1" cellpadding="2" cellspacing="0" class="table table-striped">
+						<table width="100%" border="1" cellpadding="2" cellspacing="0">
 							<tr style="border-botton: none;">
 								<th colspan="8"><h3>Lista de Produtos</h3></th>
 							</tr>

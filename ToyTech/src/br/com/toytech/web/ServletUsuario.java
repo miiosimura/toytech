@@ -48,14 +48,12 @@ public class ServletUsuario extends HttpServlet {
 				HttpSession session = request.getSession(true);
 				session.setAttribute("usuario", usuario);
 				rd = request.getRequestDispatcher("/excUsuario.jsp");
-				
 			}
 			
-			else if (cmd.equalsIgnoreCase("excluir")) {
-				usuario.setIdUsuario(Integer.parseInt(request.getParameter("idUsuario")));
+			else if (cmd.equalsIgnoreCase("excluir")) {	
 				dao.excluir(usuario);
-				rd = request.getRequestDispatcher("ServletUsuario?cmd=mostrar");
-								
+				rd = request.getRequestDispatcher("/listUsuario.jsp");
+				
 			} 
 			
 			else if (cmd.equalsIgnoreCase("atu")) {

@@ -122,7 +122,7 @@
 						 
 						 <tr>
 							<td colspan="2" align="center"><br />
-							<input type="submit" value="Atualizar"></td>
+							<input type="submit" value="Enviar"></td>
 						 </tr>
 					</tbody>
 				</form>

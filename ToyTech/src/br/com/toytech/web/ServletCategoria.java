@@ -48,10 +48,9 @@ public class ServletCategoria extends HttpServlet {
 				rd = request.getRequestDispatcher("/excCategoria.jsp");
 			} 
 			
-			else if (cmd.equalsIgnoreCase("excluir")) {
-				categoria.setIdCategoria(Integer.parseInt(request.getParameter("idCategoria")));
+			else if (cmd.equalsIgnoreCase("excluir")) {	
 				dao.excluir(categoria);
-				rd = request.getRequestDispatcher("ServletCategoria?cmd=mostrar");
+				rd = request.getRequestDispatcher("listCategoria.jsp");
 				
 			} 
 			
